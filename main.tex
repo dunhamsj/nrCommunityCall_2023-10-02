@@ -68,17 +68,53 @@
 
 \begin{frame}
 
-  \vspace{-10em}
-
   \begin{figure}[ht]
     \centering
     \includegraphics[width=0.3\textwidth]{fig.thornado_logo.png}
   \end{figure}
 
   \begin{center}
+
     \ul{t}oolkit for
     \ul{h}igh-\ul{or}der
-    \ul{n}eutrino-r\ul{ad}iation hydr\ul{o}dynamics
+    \ul{n}eutrino-r\ul{ad}iation hydr\ul{o}dynamics\\[1em]
+
+    \begin{columns}[c]
+
+      \column{0.5\textwidth}
+
+        \begin{itemize}
+          \item
+            DG
+          \item
+            SSPRK/IMEX
+          \item
+            GR (xCFC)
+          \item
+            Hydro (Valencia)
+          \item
+            Neutrino transport (M1)
+          \item
+            Interfaces to tabulated EoS/Opacities
+            (weaklib: \url{https://github.com/starkiller-astro/weaklib})
+        \end{itemize}
+
+      \column{0.5\textwidth}
+
+        \begin{itemize}
+          \item
+            Fluid self-gravity via \poseidon:
+            \url{https://github.com/jrober50/Poseidon}
+          \item
+            GPUs via OpenACC and OpenMP pragmas
+          \item
+            MPI parallelism via \amrex
+          \item
+            AMR via \amrex
+        \end{itemize}
+
+    \end{columns}
+
   \end{center}
 
 \end{frame}
