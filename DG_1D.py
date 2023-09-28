@@ -66,10 +66,12 @@ def AddQuadraturePoints( ax, N, c ):
 
     xq, wq = gaussxw( N )
 
+    ms = 5
+    if N == 1: ms = 10
     rhoE = rhoExact( x )
     a = 0.5 * ( rhoE.min() + rhoE.max() )
     for i in range( N ):
-        ax.plot( xq[i], a, c + '.' )
+        ax.plot( xq[i], a, c + '.', ms = ms )
 
     return
 
