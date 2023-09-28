@@ -129,17 +129,17 @@ if __name__ == '__main__':
     N = 1
     c = 'm'
     PlotDensity( N, fig, ax, vmin, vmax, c )
-    AddQuadraturePoints( ax, N, c )
+#    AddQuadraturePoints( ax, N, c )
 
     N = 2
     c = 'r'
     PlotDensity( N, fig, ax, vmin, vmax, c )
-    AddQuadraturePoints( ax, N, c )
+#    AddQuadraturePoints( ax, N, c )
 
     N = 3
     c = 'b'
     PlotDensity( N, fig, ax, vmin, vmax, c )
-    AddQuadraturePoints( ax, N, c )
+#    AddQuadraturePoints( ax, N, c )
 
     ax.legend()
 
