@@ -33,12 +33,15 @@
 
   \titlepage
 
+  \vspace{-1em}
+
   \begin{center}
     Brandon Barker (MSU/LANL), %
     Jesse Buffaloe (UTK), \\
     SJD (Vanderbilt,UTK), %
-    Eirik Endeve (ORNL/UTK), \\
-    Anthony Mezzacappa (UTK), %
+    Zack Elledge (UTK), \\
+    Eirik Endeve (ORNL/UTK), %
+    Anthony Mezzacappa (UTK), \\
     Nick Roberts (UTK)
   \end{center}
 
@@ -123,6 +126,7 @@
 
   \begin{equation*}
     ds^{2}
+    =g_{\mu\nu}\,dx^{\mu}\,dx^{\nu}
     =-\alpha^{2}\,dt^{2}
      +\gamma_{ij}\left(dx^{i}+\beta^{i}\,dt\right)
                  \left(dx^{j}+\beta^{j}\,dt\right)
@@ -149,11 +153,13 @@
       \begin{equation*}
         \gamma_{ij}\left(x\right)
         =\psi^{4}\left(x\right)\,\overline{\gamma}_{ij}\left(x^{i}\right)
-      \end{equation*}
+      \end{equation*}\vspace{1em}
+
+      Exact in spherical symmetry!
 
     \column{.5\textwidth}
 
-      Special case: Schwarzchild metric in isotropic coordinates
+      Special case: Schwarzchild spacetime in isotropic coordinates
 
       \begin{align*}
         \alpha&=\left(1+\rsc/r\right)\left(1-\rsc/r\right)^{-1} \\
@@ -267,14 +273,36 @@
 \begin{frame}
 \frametitle{Summary}
 
-  \begin{itemize}
-    \item
-      Can run pure hydro problems in GR with AMR
-    \item
-      Doing GR, adiabatic collapse simulations with mesh refinement
-    \item
-      Working on coupling GR transport to existing hydro+gravity modules
-  \end{itemize}
+  \begin{tabular}{cl}
+    \begin{tabular}{l}
+      \parbox{0.7\linewidth}%
+      {Can run pure hydro problems in GR with AMR}
+    \end{tabular}
+    \begin{tabular}{c}
+      \includegraphics[width=0.15\textwidth]{fig.KHI.pdf}
+    \end{tabular}
+  \end{tabular}
+
+  \begin{tabular}{cl}
+    \begin{tabular}{c}
+      \includegraphics[width=0.2\textwidth]{fig.Collapse.png}
+    \end{tabular}
+    \begin{tabular}{l}
+      \parbox{0.7\linewidth}%
+      {Doing GR, adiabatic collapse simulations with mesh refinement}
+    \end{tabular}
+  \end{tabular}
+
+  \begin{tabular}{cl}
+    \begin{tabular}{l}
+      \parbox{0.7\linewidth}%
+      {Working on coupling GR transport to existing hydro+gravity modules}
+    \end{tabular}
+    \begin{tabular}{c}
+      \includegraphics[width=0.2\textwidth]{fig.Collapse_amr.png}
+    \end{tabular}
+  \end{tabular}
+
 
 \end{frame}
 

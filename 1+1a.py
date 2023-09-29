@@ -28,7 +28,7 @@ ax.plot( [ xM[1], xM[1] ], [ yM[0], yM[1] ], 'k-' )
 ax.plot( [ xM[1], xM[0] ], [ yM[1], yM[1] ], 'k-' )
 ax.plot( [ xM[0], xM[0] ], [ yM[1], yM[0] ], 'k-' )
 
-ax.text( 0.3, 0.9, r'$\mathcal{M}\cong\Sigma\times\mathbb{R}^{+}$', \
+ax.text( 0.44, 0.925, r'$\mathcal{M}\cong\Sigma\times\mathbb{R}^{+}$', \
          fontsize = 16 )
 
 x = np.linspace( xM[0]+0.01, xM[1]-0.01, 100 )
@@ -41,6 +41,8 @@ ax.plot( x, y1(x), cs1 + '-' )
 x1 = x[45]
 ax.plot( x1, y1( x1 ), cs1 + 'o', ms = 8 )
 ax.text( 0.7, 0.05, r'$\Sigma_{t}$', c = cs1, fontsize = 16 )
+ax.text( 0.05, 0.35, r'$\gamma_{ij}\left(t,x^{i}\right)$', \
+         c = cs1, fontsize = 12 )
 
 cs2 = 'b'
 def y2( x ):
@@ -51,6 +53,8 @@ ax.plot( x, y2(x), cs2 + '-' )
 x2 = x[70]
 ax.plot( x2, y2( x2 ), cs2 + 'o', ms = 8 )
 ax.text( 0.7, y2( 0.85 ) - 0.1, r'$\Sigma_{t+dt}$', c = cs2, fontsize = 16 )
+ax.text( 0.05, 0.85, r'$\gamma_{ij}\left(t+dt,x^{i}\right)$', \
+         c = cs2, fontsize = 12 )
 
 n12 = patches.FancyArrowPatch \
         ( ( x1, y1( x1 ) ), ( x1, y2( x1 ) ), \
@@ -88,7 +92,7 @@ ax.text( 0.5 * ( x1 + x2 )+0.05, 0.5 * ( y1( x1 ) + y2( x2 ) ), \
          c = 'm', fontsize = 16 )
 
 b = patches.FancyArrowPatch \
-        ( ( x2, y2( x2 ) ), ( x1, y2( x1 ) ), \
+        ( ( x1, y2( x1 ) ), ( x2, y2( x2 ) ), \
           color = 'm', **kw )
 plt.gca().add_patch( b )
 ax.text( x1+0.1, y2( x2 )+0.01, \
