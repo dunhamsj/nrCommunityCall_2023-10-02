@@ -95,9 +95,9 @@
           \item
             GR (xCFC)
           \item
-            Hydro (Valencia)
+            Hydro (Valencia)\footnote{\citet{pbe2021},\citet{ebd2019},\citet{dem2020}}
           \item
-            Neutrino transport (M1)
+            Neutrino transport (M1)\footnote{\citet{lec2021}}
           \item
             Interfaces to tabulated EoS/Opacities
             (weaklib: \url{https://github.com/starkiller-astro/weaklib})
@@ -110,7 +110,7 @@
             Fluid self-gravity via \poseidon:
             \url{https://github.com/jrober50/Poseidon}
           \item
-            GPUs via OpenACC and OpenMP pragmas
+            GPUs via OpenACC or OpenMP pragmas
           \item
             MPI parallelism and AMR via \amrex:
             \url{https://github.com/AMReX-Codes/amrex}
@@ -151,12 +151,17 @@
 
       Developed by \citet{wmm1996}, extended by \citet{cc2009}
 
-      \begin{equation*}
+      \begin{align*}
         \gamma_{ij}\left(x\right)
-        =\psi^{4}\left(x\right)\,\overline{\gamma}_{ij}\left(x^{i}\right)
-      \end{equation*}\vspace{1em}
+        &=\psi^{4}\left(x\right)\,\overline{\gamma}_{ij}\left(x^{i}\right) \\
+        K&=0,\ \p_{t}\,K=0
+      \end{align*}\vspace{1em}
 
-      Exact in spherical symmetry!
+      \begin{itemize}
+        \item Exact in spherical symmetry!
+        \item Hyperbolic $\rightarrow$ Elliptic equations
+        \item Good for long-time simulations
+      \end{itemize}
 
     \column{.5\textwidth}
 
@@ -206,6 +211,11 @@
 \begin{frame}
 \frametitle{Standing Accretion Shock Instability}
 
+  Add citation to 2020 paper and to the arxiv preprint
+  mention that used thornado to investigate gr on sasi
+\footnote{2020 paper}
+\footnote{2023 paper}
+
   \begin{figure}[htb!]
     \centering
     \includegraphics[width=0.9\textwidth]{fig.sasi.png}
@@ -216,10 +226,11 @@
 \begin{frame}
 \frametitle{Kelvin--Helmholtz Instability}
 
-  \begin{figure}[htb!]
-    \centering
-    \includegraphics[width=0.6\textwidth]{fig.KHI.pdf}
-  \end{figure}
+  \begin{center}
+    \movie[externalviewer]%
+    {\includegraphics[width=0.6\textwidth]{fig.KHI.pdf}}%
+    {mov.khi.mp4}
+  \end{center}
 
 \end{frame}
 
@@ -246,12 +257,11 @@
 \begin{frame}
 \frametitle{Adiabatic Collapse (AMR)}
 
-  \begin{figure}[htb!]
-    \centering
-    \includegraphics[width=0.8\textwidth]{fig.Collapse_amr.png}
-  \end{figure}
-
-  \href{mov.AdiabaticCollapse_amr.mp4}{\nolinkurl{<movie>}}
+  \begin{center}
+    \movie[externalviewer]%
+    {\includegraphics[width=0.8\textwidth]{fig.Collapse_amr.png}}%
+    {mov.AdiabaticCollapse_amr.mp4}
+  \end{center}
 
 \end{frame}
 
@@ -259,13 +269,13 @@
 \frametitle{Works in Progress}
 
   \begin{itemize}
-    \item
+    \vfill\item
       Finish debugging AMR in hydro+gravity
-    \item
+    \vfill\item
       Finish testing GR neutrino transport
-    \item
+    \vfill\item
       Couple GR transport to hydro and gravity
-    \item
+    \vfill\item
       Add AMR capabilities to transport
   \end{itemize}
 
@@ -310,6 +320,7 @@
 \begin{frame}
 \frametitle{Bibliography}
 
+  \Fontvi
   \bibliography{bibfile.bib}
 
 \end{frame}
