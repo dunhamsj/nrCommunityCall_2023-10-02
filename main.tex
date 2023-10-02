@@ -31,7 +31,7 @@
 
 \begin{frame}
 
-  \titlepage
+  \maketitle
 
   \vspace{-1em}
 
@@ -52,19 +52,13 @@
 
     \column{.3\textwidth}
       \begin{center}\thornado\end{center}
-      \vspace{-1.5em}
-      \begin{figure}[htb!]
-        \centering
-        \includegraphics[width=0.5\textwidth]{fig.thornado.png}
-      \end{figure}
+      \vspace{-1.0em}
+      \url{https://github.com/endeve/thornado}
 
     \column{.3\textwidth}
       \begin{center}My Website\end{center}
-      \vspace{-1.5em}
-      \begin{figure}[htb!]
-        \centering
-        \includegraphics[width=0.5\textwidth]{fig.website.png}
-      \end{figure}
+      \vspace{-1.0em}
+      \url{https://www.samueljdunham.com}
 
   \end{columns}
 
@@ -95,9 +89,10 @@
           \item
             GR (xCFC)
           \item
-            Hydro (Valencia)\footnote{\citet{pbe2021},\citet{ebd2019},\citet{dem2020}}
+            Hydro\footnote{\citet{ebd2019,dem2020,pbe2021}}
+            (Valencia)
           \item
-            Neutrino transport (M1)\footnote{\citet{lec2021}}
+            Neutrino transport\footnote{\citet{lec2021}} (M1)
           \item
             Interfaces to tabulated EoS/Opacities
             (weaklib: \url{https://github.com/starkiller-astro/weaklib})
@@ -211,10 +206,8 @@
 \begin{frame}
 \frametitle{Standing Accretion Shock Instability}
 
-  Add citation to 2020 paper and to the arxiv preprint
-  mention that used thornado to investigate gr on sasi
-\footnote{2020 paper}
-\footnote{2023 paper}
+  Used \thornado{} to investigate the role of GR on the SASI%
+  \footnote{\citet{dem2020,dem2023}}
 
   \begin{figure}[htb!]
     \centering
@@ -282,6 +275,14 @@
 \end{frame}
 
 \begin{frame}
+\frametitle{Bibliography}
+
+  \Fontvi
+  \bibliography{bibfile.bib}
+
+\end{frame}
+
+\begin{frame}
 \frametitle{Summary}
 
   \begin{tabular}{cl}
@@ -314,14 +315,6 @@
     \end{tabular}
   \end{tabular}
 
-
-\end{frame}
-
-\begin{frame}
-\frametitle{Bibliography}
-
-  \Fontvi
-  \bibliography{bibfile.bib}
 
 \end{frame}
 
